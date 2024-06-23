@@ -33,16 +33,15 @@
 
 .welcome_text
 {
-    margin: 0 auto;
     color: rgba(255, 0, 0, 0.56);
     font-size: 128px;
     line-height: 128px;
     font-weight: 400;
     text-align: center;
     -webkit-text-stroke: 4px black;
-    /*text-shadow: 10px 7px 1px rgba(0, 0, 0, 1);*/
-    text-shadow: 14px 11px 0 #000000;
-    margin-top: 80px;
+    text-shadow: 12px 5px 0 #000000;
+    margin: 80px auto 0;
+    letter-spacing: 1px;
 }
 
 .name_input
@@ -69,6 +68,11 @@
     outline-offset: 0;
 }
 
+.name_input::placeholder, .name_input::-moz-placeholder, .name_input:-moz-placeholder
+{
+    opacity: 100%;
+}
+
 .management
 {
     width: 73%;
@@ -92,7 +96,7 @@
     background: none;
     border: none;
     font-family: "Jolly Lodger";
-    font-size: 60px;
+    font-size: 61px;
     font-weight: 400;
     line-height: 90px;
     text-align: left;
@@ -107,7 +111,7 @@
 {
     cursor: pointer;
     text-shadow: 6px 5px 1px rgba(255, 255, 255, 0.1);
-    font-size: 62px;
+    font-size: 63px;
 }
 
 .tag_input
@@ -118,7 +122,7 @@
     border: none;
     text-align: center;
     font-family: "Iceberg";
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 400;
     line-height: 45px;
     color: rgba(252, 12, 12, 1);
