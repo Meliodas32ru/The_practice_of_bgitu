@@ -1,8 +1,8 @@
 import React from "react";
-import InputName from "./InputName";
-import LobbyManagement from "./LobbyManagement";
+import InputName from "./WelcomePage/InputName";
+import LobbyManagement from "./WelcomePage/LobbyManagement";
 
-class App extends React.Component
+class WelcomePage extends React.Component
 {
     constructor(props)
     {
@@ -49,4 +49,4 @@ class App extends React.Component
     }
 }
 
-export default App;
+export default WelcomePage;

@@ -1,3 +1,8 @@
+body, html
+{
+    background: black;
+}
+
 *
 {
     margin: 0;
@@ -7,7 +12,7 @@
 @font-face
 {
     font-family: 'Jolly Lodger';
-    src: url('../media/jolly-lodger-cyrillic.otf') format('opentype'), url('../media/JollyLodger-Regular.ttf') format('truetype');
+    src: url('../media/fonts/jolly-lodger-cyrillic.otf') format('opentype'), url('../media/fonts/JollyLodger-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +20,7 @@
 @font-face
 {
     font-family: 'Iceberg';
-    src: url('../media/Iceberg-Regular.ttf') format('truetype');
+    src: url('../media/fonts/Iceberg-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +29,7 @@
 {
     width: 100%;
     height: 100vh;
-    background-image: url("../media/bg_logo.jpg");
+    background-image: url("../media/images/bg_logo.jpg");
     background-size: 100% 100vh;
     display: flex;
     flex-direction: column;
@@ -102,7 +107,7 @@
     text-align: left;
     color: rgba(94, 188, 37, 1);
     -webkit-text-stroke: 2px black;
-    text-shadow: 5px 4px 1px rgba(0, 0, 0, 1);
+    text-shadow: 0 4px 1px rgba(0, 0, 0, 1);
     margin-right: 125px;
     padding-bottom: 20px;
 }
@@ -166,4 +171,155 @@
     background: rgba(255, 255, 255, 0.08);
     cursor: pointer;
     text-shadow: 5px 4px 1px rgba(255, 255, 255, 0.1);
+}
+
+.lobby_bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/Lobby.jpg");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.characters_block
+{
+    display: flex;
+    height: 472px;
+    background: none;
+    margin: 50px auto 0;
+    width: 95%;
+    gap: 93px;
+}
+
+.character_box
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.character
+{
+    width: 295px;
+    height: 391px;
+    background: linear-gradient(180deg, rgba(118, 253, 36, 0.31) 0%, rgba(150, 120, 120, 0.31) 40%, rgba(255, 255, 255, 0.31) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_character
+{
+    font-family: "Inter", sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+    line-height: 242.05px;
+    text-align: center;
+    color: #504E4E;
+}
+
+.lobby_input
+{
+    margin-top: 30px;
+    width: 295px;
+    height: 49px;
+    border: none;
+    background: #2D29296E;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
+}
+
+.lobby_input:active, .lobby_input:hover, .lobby_input:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+.lobby_input::placeholder, .lobby_input:-moz-placeholder
+{
+    opacity: 100%;
+}
+
+.character_choice
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 26, 26, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.choice_box
+{
+    width: 320px;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 15px;
+    align-items: center;
+    gap: 5px;
+}
+
+.choice_btn
+{
+    width: 220px;
+    height: 49px;
+    border-radius: 8px;
+    background: rgba(45, 41, 41, 0.43);
+    border: none;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0.5px #000;
+}
+
+.choice_btn:hover
+{
+    cursor: pointer;
+    font-size: 29px;
+    transition: .5s all ease;
+}
+
+.character_img_sm
+{
+    width: 45px;
+    height: 69px;
+}
+
+.not_yet_btn
+{
+    width: 295px;
+    height: 49px;
+    border-radius: 8px;
+    /*background: rgba(45, 41, 41, 0.43);*/
+    background: none;
+    border: none;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0.5px #000;
+}
+
+.not_yet_btn:hover
+{
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s all ease;
+}
+
+.d-none
+{
+    display: none;
 }
