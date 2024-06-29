@@ -1,6 +1,6 @@
 import React from "react";
 
-class LobbyManagement extends React.Component
+class ConnectionManagement extends React.Component
 {
     render()
     {
@@ -18,4 +18,4 @@ class LobbyManagement extends React.Component
     }
 }
 
-export default LobbyManagement;
+export default ConnectionManagement;

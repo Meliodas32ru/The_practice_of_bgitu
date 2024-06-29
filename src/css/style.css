@@ -112,7 +112,7 @@ body, html
     padding-bottom: 20px;
 }
 
-.create_lobby:hover
+.create_lobby:hover, .start_game:hover
 {
     cursor: pointer;
     text-shadow: 6px 5px 1px rgba(255, 255, 255, 0.1);
@@ -260,7 +260,7 @@ body, html
 {
     width: 320px;
     display: flex;
-    padding-left: 10px;
+    padding-left: 12px;
     padding-top: 15px;
     align-items: center;
     gap: 5px;
@@ -295,6 +295,12 @@ body, html
     height: 69px;
 }
 
+.character_img_sm:hover
+{
+    cursor: pointer;
+    filter: hue-rotate(45deg);
+}
+
 .not_yet_btn
 {
     width: 295px;
@@ -319,7 +325,60 @@ body, html
     transition: .5s all ease;
 }
 
+.character_img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.lobby_footer
+{
+    width: 73%;
+    height: 90px;
+    margin: 120px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start_game
+{
+    background: none;
+    border: none;
+    font-family: "Jolly Lodger";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: left;
+    color: rgba(94, 188, 37, 1);
+    -webkit-text-stroke: 2px black;
+    text-shadow: 0 4px 1px rgba(0, 0, 0, 1);
+    margin-right: 10px;
+}
+
+.inactive
+{
+    color: rgba(37, 67, 19, 1);
+}
+
+.inactive:hover
+{
+    cursor: not-allowed;
+}
+
 .d-none
 {
     display: none;
+}
+
+.unavailable
+{
+    filter: grayscale(100%);
+}
+
+.unavailable:hover
+{
+    cursor: not-allowed;
+    color: #504E4E;
+    font-size: 25px;
 }

@@ -1,17 +1,31 @@
-import React from "react";
-import warrior from "../../media/images/warrior.jpg";
+import React, {useEffect, useState} from "react";
 
-class CharacterClass extends React.Component
+const CharacterClass = (props) =>
 {
-    render()
+    let [boxStyle, setBoxStyle] = useState("choice_box")
+    let [btnStyle, setBtnStyle] = useState("choice_btn")
+    let [imgStyle, setImgStyle] = useState("character_img_sm")
+
+    useEffect(() =>
     {
-        return (
-            <div className="choice_box">
-                <button className="choice_btn">{this.props.character_type}</button>
-                <img className="character_img_sm" src={this.props.img}/>
-            </div>
-        )
-    }
+        if(props.locked)
+        {
+            setBoxStyle(boxStyle + " unavailable")
+            setBtnStyle(btnStyle + " unavailable")
+            setImgStyle(imgStyle + " unavailable")
+        }
+    }, [boxStyle, btnStyle, imgStyle, props.locked])
+
+    return (
+        <div className={boxStyle}>
+            <button className={btnStyle} onClick={props.onClick}>{props.character_type}</button>
+            <img className={imgStyle} src={props.img} onClick={props.onClick}/>
+        </div>
+    )
+
 }
+
+
+
 
 export default CharacterClass

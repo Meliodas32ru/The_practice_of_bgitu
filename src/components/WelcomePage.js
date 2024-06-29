@@ -1,6 +1,6 @@
 import React from "react";
 import InputName from "./WelcomePage/InputName";
-import LobbyManagement from "./WelcomePage/LobbyManagement";
+import ConnectionManagement from "./WelcomePage/ConnectionManagement";
 
 class WelcomePage extends React.Component
 {
@@ -20,7 +20,7 @@ class WelcomePage extends React.Component
             <div className="bg">
                 <h1 className="welcome_text">{this.state.welcome_text}</h1>
                 <InputName />
-                <LobbyManagement createLobbyHandler={this.createLobby} connectToLobbyHandler={this.connectToLobby}/>
+                <ConnectionManagement createLobbyHandler={this.createLobby} connectToLobbyHandler={this.connectToLobby}/>
             </div>
         </>
     )
