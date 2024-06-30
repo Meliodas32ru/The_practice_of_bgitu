@@ -6,7 +6,7 @@ import * as SignalR from "@microsoft/signalr"
 
 const WelcomePage = (props) =>
 {
-    const hubConnection = new SignalR.HubConnectionBuilder().withUrl("/chat").build();
+    const hubConnection = new SignalR.HubConnectionBuilder().withUrl("http://lovaset:3000/chat").build();
     const Navigate = useNavigate()
     let [welcomeText, setWelcomeText] = useState("Welcome to Dark Castle")
     hubConnection.on("GetTag", (Tag)=>{
