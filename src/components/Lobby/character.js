@@ -40,7 +40,7 @@ class character extends React.Component
                         </div>
                         <img src={this.state.img} className={this.state.character_img_style}/>
                     </div>
-                    <input className="lobby_input" placeholder="Name"/>
+                    <input className="lobby_input" value={this.props.pers_name} placeholder="Name"/>
                 </div>
             </>
         )

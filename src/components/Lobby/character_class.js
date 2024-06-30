@@ -25,7 +25,4 @@ const CharacterClass = (props) =>
 
 }
 
-
-
-
 export default CharacterClass

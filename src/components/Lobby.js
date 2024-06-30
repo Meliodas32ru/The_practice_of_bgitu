@@ -1,95 +1,98 @@
-import React from "react";
+import React, {useState} from "react";
 import Character from "./Lobby/character";
+import {useLocation} from "react-router-dom";
 
 
-class Lobby extends React.Component
+const Lobby = (props) =>
 {
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            "id_1": false,
-            "id_2": false,
-            "id_3": false,
-            "id_4": false,
-            start_game_style: "start_game inactive",
-            warrior_locked: false,
-            mage_locked: false,
-            archer_locked: false,
-            rogue_locked: false,
-        }
-        this.changeState = this.changeState.bind(this)
-        this.queryLocked = this.queryLocked.bind(this)
-        this.lockPersType = this.lockPersType.bind(this)
-    }
-    render()
-    {
-        return(
-            <>
-                <div className="lobby_bg">
-                    <div className="characters_block">
-                        <Character lock={this.lockPersType} queryF={this.queryLocked} character_id={"id_1"} change={this.changeState}/>
-                        <Character lock={this.lockPersType} queryF={this.queryLocked} character_id={"id_2"} change={this.changeState}/>
-                        <Character lock={this.lockPersType} queryF={this.queryLocked} character_id={"id_3"} change={this.changeState}/>
-                        <Character lock={this.lockPersType} queryF={this.queryLocked} character_id={"id_4"} change={this.changeState}/>
-                    </div>
-                    <div className="lobby_footer">
-                        <input className="tag_input" placeholder="Tag"/>
-                        <button className={this.state.start_game_style}>Start the Game</button>
-                    </div>
+    let [id_1, setID_1] = useState(false)
+    let [id_2, setID_2] = useState(false)
+    let [id_3, setID_3] = useState(false)
+    let [id_4, setID_4] = useState(false)
+    let [startGameStyle, setStartGameStyle] = useState("start_game inactive")
+    let [warriorLocked, setWarriorLocked] = useState(false)
+    let [mageLocked, setMageLocked] = useState(false)
+    let [archerLocked, setArcherLocked] = useState(false)
+    let [rogueLocked, setRogueLocked] = useState(false)
+
+    let Data = useLocation();
+    let name = Data.state.name
+    return(
+        <>
+            <div className="lobby_bg">
+                <div className="characters_block">
+                    <Character pers_name={name} lock={lockPersType} queryF={queryLocked} character_id={"id_1"} change={changeState}/>
+                    <Character lock={lockPersType} queryF={queryLocked} character_id={"id_2"} change={changeState}/>
+                    <Character lock={lockPersType} queryF={queryLocked} character_id={"id_3"} change={changeState}/>
+                    <Character lock={lockPersType} queryF={queryLocked} character_id={"id_4"} change={changeState}/>
                 </div>
-            </>
-        )
-    }
-    changeState(idx)
+                <div className="lobby_footer">
+                    <input className="tag_input" value={randomNumber(10000, 99999)} placeholder="Tag"/>
+                    <button className={startGameStyle}>Start the Game</button>
+                </div>
+            </div>
+        </>
+    )
+
+    function changeState(idx)//Эта функция даёт понять, выбрал ли игрок всех 4-х персов?
     {
         if(idx === "id_1")
         {
-            this.setState({"id_1": true})
+            setID_1(true)
         }
 
         if(idx === "id_2")
         {
-            this.setState({"id_2": true})
+            setID_2(true)
         }
 
         if(idx === "id_3")
         {
-            this.setState({"id_3": true})
+            setID_3(true)
         }
 
         if(idx === "id_4")
         {
-            this.setState({"id_4": true})
+            setID_4(true)
         }
-
-        if(this.state.id_1 && this.state.id_2 && this.state.id_3)
+        let selected = 0;
+        let check = [id_1, id_2, id_3, id_4]
+        check.forEach((elem) =>
         {
-            this.setState({start_game_style: "start_game"})
-        }
-    }
-
-    lockPersType(ident)
-    {
-        switch (ident)
+            selected += Number(elem)
+        })
+        if(selected === 3)
         {
-            case 1: this.setState({warrior_locked: true}); break;
-            case 2: this.setState({mage_locked: true}); break;
-            case 3:  this.setState({archer_locked: true}); break;
-            case 4:  this.setState({rogue_locked: true}); break;
+            setStartGameStyle("start_game")
         }
     }
 
-    queryLocked(ident)
+    function lockPersType(ident)//Блокируем определённый тип перса
     {
         switch (ident)
         {
-            case 1: return this.state.warrior_locked
-            case 2: return this.state.mage_locked
-            case 3: return this.state.archer_locked
-            case 4: return this.state.rogue_locked
+            case 1: setWarriorLocked(true); break;
+            case 2: setMageLocked(true); break;
+            case 3: setArcherLocked(true); break;
+            case 4: setRogueLocked(true); break;
+        }
+    }
+
+    function queryLocked(ident)//Заблокирован ли данный тип перса или нет?
+    {
+        switch (ident)
+        {
+            case 1: return warriorLocked
+            case 2: return mageLocked
+            case 3: return archerLocked
+            case 4: return rogueLocked
             default: return NaN
         }
+    }
+
+    function randomNumber(min, max)
+    {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 }
 
