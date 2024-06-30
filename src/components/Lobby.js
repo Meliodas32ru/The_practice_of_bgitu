@@ -15,8 +15,9 @@ const Lobby = (props) =>
     let [archerLocked, setArcherLocked] = useState(false)
     let [rogueLocked, setRogueLocked] = useState(false)
 
-    let Data = useLocation();
-    let name = Data.state.name
+    const Data = useLocation();
+    const name = Data.state.name
+    const tag = Data.state.tag
     return(
         <>
             <div className="lobby_bg">
@@ -27,7 +28,7 @@ const Lobby = (props) =>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_4"} change={changeState}/>
                 </div>
                 <div className="lobby_footer">
-                    <input className="tag_input" value={randomNumber(10000, 99999)} placeholder="Tag"/>
+                    <input className="tag_input" value={tag} placeholder="Tag" readOnly={true}/>
                     <button className={startGameStyle}>Start the Game</button>
                 </div>
             </div>
@@ -88,11 +89,6 @@ const Lobby = (props) =>
             case 4: return rogueLocked
             default: return NaN
         }
-    }
-
-    function randomNumber(min, max)
-    {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 }
 

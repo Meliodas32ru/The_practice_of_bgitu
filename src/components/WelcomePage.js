@@ -35,12 +35,17 @@ const WelcomePage = (props) =>
         {
             console.log('Заглушка на создание лобби')
             const name = document.querySelector(`.name_input`).value
-            Navigate(`/Lobby`, {state: {name: name}})
+            Navigate(`/Lobby`, {state: {name: name, tag: randomNumber(10000, 99999)}})
         }
     }
     function connectToLobby(e)
     {
         console.log('Заглушка на подключение к лобби')
+    }
+
+    function randomNumber(min, max)
+    {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
 }
