@@ -2,11 +2,18 @@ import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import InputName from "./WelcomePage/InputName";
 import ConnectionManagement from "./WelcomePage/ConnectionManagement";
+import * as SignalR from "@microsoft/signalr"
 
 const WelcomePage = (props) =>
 {
+    const hubConnection = new SignalR.HubConnectionBuilder().withUrl("/chat").build();
     const Navigate = useNavigate()
     let [welcomeText, setWelcomeText] = useState("Welcome to Dark Castle")
+    hubConnection.on("GetTag", (Tag)=>{
+        //Жду ответа от сервера, получаю параметры и посылаю их на Navigate
+        const name = document.querySelector(`.name_input`).value
+        Navigate(`/Lobby`, {state: {name: name, tag: Tag}})
+    });
 
     return (
         <>
@@ -34,20 +41,21 @@ const WelcomePage = (props) =>
         else
         {
             console.log('Заглушка на создание лобби')
-            const name = document.querySelector(`.name_input`).value
-            Navigate(`/Lobby`, {state: {name: name, tag: randomNumber(10000, 99999)}})
+            const clientName = document.querySelector(`.name_input`).value
+            hubConnection.invoke("Join", clientName).catch(function (err)
+            {
+                return console.error(err.toString());
+            });
+
+            //Вызов метода SignalR. Он принимает имя, вернёт название группы и массив имён
+            //Метод 1 вернёт имя. Метод 2 вернёт массив имён
         }
     }
     function connectToLobby(e)
     {
+        //Передаём name и tag
         console.log('Заглушка на подключение к лобби')
     }
-
-    function randomNumber(min, max)
-    {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
 }
 
 export default WelcomePage;
