@@ -15,20 +15,20 @@ const Lobby = (props) =>
     let [archerLocked, setArcherLocked] = useState(false)
     let [rogueLocked, setRogueLocked] = useState(false)
 
-    const Data = useLocation();
-    const name = Data.state.name
-    const tag = Data.state.tag
+    // const Data = useLocation();
+    // const name = Data.state.name
+    // const tag = Data.state.tag
     return(
         <>
             <div className="lobby_bg">
                 <div className="characters_block">
-                    <Character pers_name={name} lock={lockPersType} queryF={queryLocked} character_id={"id_1"} change={changeState}/>
+                    <Character  lock={lockPersType} queryF={queryLocked} character_id={"id_1"} change={changeState}/>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_2"} change={changeState}/>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_3"} change={changeState}/>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_4"} change={changeState}/>
                 </div>
                 <div className="lobby_footer">
-                    <input className="tag_input" value={tag} placeholder="Tag" readOnly={true}/>
+                    <input className="tag_input" value="Tag" placeholder="Tag" readOnly={true}/>
                     <button className={startGameStyle}>Start the Game</button>
                 </div>
             </div>

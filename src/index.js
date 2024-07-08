@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import Lobby from "./components/Lobby";
+import StartGameNotify from "./components/StartGameNotify";
 import './css/style.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,7 @@ root.render(
         <Routes>
             <Route exact path="/" element={<WelcomePage />} />
             <Route exact path="/Lobby" element={<Lobby />} />
+            <Route exact path="/start" element={<StartGameNotify />} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>

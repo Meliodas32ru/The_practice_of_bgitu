@@ -112,7 +112,7 @@ body, html
     padding-bottom: 20px;
 }
 
-.create_lobby:hover, .start_game:hover
+.create_lobby:hover, .start_game:hover, .continue:hover
 {
     cursor: pointer;
     text-shadow: 6px 5px 1px rgba(255, 255, 255, 0.1);
@@ -341,7 +341,7 @@ body, html
     align-items: center;
 }
 
-.start_game
+.start_game, .continue
 {
     background: none;
     border: none;
@@ -355,6 +355,48 @@ body, html
     text-shadow: 0 4px 1px rgba(0, 0, 0, 1);
     margin-right: 10px;
 }
+
+.continue
+{
+    margin-left: 120px;
+}
+
+.SGN_textbox
+{
+    width: 1024px;
+    height: 172px;
+    border-radius: 25px;
+    background: #2D29296E;
+    margin: 80px auto 0;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 4px;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.SGN_container
+{
+    display: flex;
+}
+
+.SGN_container div
+{
+    width: 33%;
+    align-content: end;
+}
+
+.SGN_img
+{
+    width: 435px;
+    height: 480px;
+    border-radius: 50px;
+    margin:  0 auto;
+}
+
 
 .inactive
 {
