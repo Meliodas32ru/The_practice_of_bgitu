@@ -22,7 +22,7 @@ const Lobby = (props) =>
         <>
             <div className="lobby_bg">
                 <div className="characters_block">
-                    <Character  lock={lockPersType} queryF={queryLocked} character_id={"id_1"} change={changeState}/>
+                    <Character lock={lockPersType} queryF={queryLocked} character_id={"id_1"} change={changeState}/>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_2"} change={changeState}/>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_3"} change={changeState}/>
                     <Character lock={lockPersType} queryF={queryLocked} character_id={"id_4"} change={changeState}/>
