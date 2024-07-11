@@ -1,0 +1,830 @@
+body, html
+{
+    background: black;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face
+{
+    font-family: 'Jolly Lodger';
+    src: url('../media/fonts/jolly-lodger-cyrillic.otf') format('opentype'), url('../media/fonts/JollyLodger-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Iceberg';
+    src: url('../media/fonts/Iceberg-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/bg_logo.jpg");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jolly Lodger";
+}
+
+.welcome_text
+{
+    color: rgba(255, 0, 0, 0.56);
+    font-size: 128px;
+    line-height: 128px;
+    font-weight: 400;
+    text-align: center;
+    -webkit-text-stroke: 4px black;
+    text-shadow: 12px 5px 0 #000000;
+    margin: 80px auto 0;
+    letter-spacing: 1px;
+}
+
+.name_input
+{
+    width: 538.67px;
+    height: 84px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background: rgba(45, 41, 41, 0.43);
+    border: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Iceberg";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    -webkit-text-stroke: 1px black;
+    margin-top: 120px;
+}
+
+.name_input:active, .name_input:hover, .name_input:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+.name_input::placeholder, .name_input::-moz-placeholder, .name_input:-moz-placeholder
+{
+    opacity: 100%;
+}
+
+.management
+{
+    width: 73%;
+    height: 90px;
+    margin: 175px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lobby_conn
+{
+    width: 369px;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.create_lobby
+{
+    background: none;
+    border: none;
+    font-family: "Jolly Lodger";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: left;
+    color: rgba(94, 188, 37, 1);
+    -webkit-text-stroke: 2px black;
+    text-shadow: 0 4px 1px rgba(0, 0, 0, 1);
+    margin-right: 125px;
+    padding-bottom: 20px;
+}
+
+.create_lobby:hover, .start_game:hover, .continue:hover, .continue_game:hover
+{
+    cursor: pointer;
+    text-shadow: 6px 5px 1px rgba(255, 255, 255, 0.1);
+    font-size: 63px;
+}
+
+.tag_input
+{
+    width: 181.99px;
+    height: 54.89px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    text-align: center;
+    font-family: "Iceberg";
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 45px;
+    color: rgba(252, 12, 12, 1);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.tag_input:active, .tag_input:hover, .tag_input:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+.tag_input::-webkit-input-placeholder, .tag_input::-moz-placeholder, .tag_input:-moz-placeholder, .tag_input::placeholder
+{
+    color: rgba(252, 12, 12, 1);
+    opacity: 100%;
+}
+
+.lobby_conn_btn
+{
+    width: 170px;
+    height: 54.89px;
+    background: rgba(22, 9, 9, 0.3);
+    border: none;
+    border-radius: 10px;
+    font-family: "Iceberg";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgba(94, 188, 37, 1);
+    -webkit-text-stroke: 0.4px black;
+    text-shadow: 5px 4px 1px rgba(0, 0, 0, 1);
+}
+
+.lobby_conn_btn:hover
+{
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    text-shadow: 5px 4px 1px rgba(255, 255, 255, 0.1);
+}
+
+.lobby_bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/Lobby.jpg");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.characters_block
+{
+    display: flex;
+    height: 472px;
+    background: none;
+    margin: 50px auto 0;
+    width: 95%;
+    gap: 93px;
+}
+
+.character_box
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.character
+{
+    width: 295px;
+    height: 391px;
+    background: linear-gradient(180deg, rgba(118, 253, 36, 0.31) 0%, rgba(150, 120, 120, 0.31) 40%, rgba(255, 255, 255, 0.31) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_character
+{
+    font-family: "Inter", sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+    line-height: 242.05px;
+    text-align: center;
+    color: #504E4E;
+}
+
+.lobby_input
+{
+    margin-top: 30px;
+    width: 295px;
+    height: 49px;
+    border: none;
+    background: #2D29296E;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
+}
+
+.lobby_input:active, .lobby_input:hover, .lobby_input:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+.lobby_input::placeholder, .lobby_input:-moz-placeholder
+{
+    opacity: 100%;
+}
+
+.character_choice
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 26, 26, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.choice_box
+{
+    width: 320px;
+    display: flex;
+    padding-left: 12px;
+    padding-top: 15px;
+    align-items: center;
+    gap: 5px;
+}
+
+.choice_btn
+{
+    width: 220px;
+    height: 49px;
+    border-radius: 8px;
+    background: rgba(45, 41, 41, 0.43);
+    border: none;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0.5px #000;
+}
+
+.choice_btn:hover
+{
+    cursor: pointer;
+    font-size: 29px;
+    transition: .5s all ease;
+}
+
+.character_img_sm
+{
+    width: 45px;
+    height: 69px;
+}
+
+.character_img_sm:hover
+{
+    cursor: pointer;
+    filter: hue-rotate(45deg);
+}
+
+.not_yet_btn
+{
+    width: 295px;
+    height: 49px;
+    border-radius: 8px;
+    /*background: rgba(45, 41, 41, 0.43);*/
+    background: none;
+    border: none;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-text-stroke: 0.5px #000;
+}
+
+.not_yet_btn:hover
+{
+    cursor: pointer;
+    font-size: 30px;
+    transition: .5s all ease;
+}
+
+.character_img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.lobby_footer
+{
+    width: 73%;
+    height: 90px;
+    margin: 120px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start_game, .continue
+{
+    background: none;
+    border: none;
+    font-family: "Jolly Lodger";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: left;
+    color: rgba(94, 188, 37, 1);
+    -webkit-text-stroke: 2px black;
+    text-shadow: 0 4px 1px rgba(0, 0, 0, 1);
+    margin-right: 10px;
+}
+
+.continue
+{
+    margin-left: 120px;
+}
+
+.SGN_textbox
+{
+    width: 1024px;
+    height: 172px;
+    border-radius: 25px;
+    background: #2D29296E;
+    margin: 80px auto 0;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 4px;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.SGN_container
+{
+    display: flex;
+}
+
+.SGN_container div
+{
+    width: 33%;
+    align-content: end;
+}
+
+.SGN_img
+{
+    width: 435px;
+    height: 480px;
+    border-radius: 50px;
+    margin:  0 auto;
+}
+
+.fight_bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/fight_bg.png");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fight_container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fight_row
+{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fight_character
+{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fight_character img
+{
+    width: 197px;
+    height: 267px;
+    border-radius: 100px;
+}
+
+.fight_name
+{
+    width: 295px;
+    height: 49px;
+    border-radius: 8px;
+    background: #2D29296E;
+    text-align: center;
+    font-family: "Iceberg";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37.5px;
+    margin-top: 15px;
+    border: none;
+    color: #FFFFFFB2;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.fight_name:active, .fight_name:hover, .fight_name:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+.health_bar
+{
+    width: 295px;
+    height: 51px;
+    background: #A90909;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Iceberg";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #BA9B9B;
+}
+
+.fight_actions
+{
+    width: 646px;
+    height: 286px;
+    border-radius: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.fight_actions p
+{
+    font-family: "Iceberg";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #ECFF17;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.fight_actions button
+{
+    width: 270px;
+    height: 53px;
+    background: #333333A1;
+    border: none;
+    font-family: "Iceberg";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.fight_actions button:hover
+{
+    cursor: pointer;
+}
+
+.fight_actions img
+{
+    width: 32px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.enemy_container
+{
+    width: 646px;
+    height: 286px;
+    border-radius: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.enemy_img
+{
+    width: 207px !important;
+    height: 268px !important;
+    border-radius: 0 !important;
+}
+
+.score_container
+{
+    display: flex;
+    width: 73%;
+    height: 77px;
+    margin: 0 auto;
+}
+
+.score_text
+{
+    font-family: "Iceberg";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 75px;
+    text-align: center;
+    color: #44FF02;
+    -webkit-text-stroke: 1px black;
+    height: max-content;
+}
+
+.score_value
+{
+    height: max-content;
+    font-family: "Iceberg";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px black;
+    padding-left: 38px;
+}
+
+.path_bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/path.jpg");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.path_row
+{
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.treasure_btn
+{
+    width: 208px;
+    height: 231px;
+    border-radius: 70px;
+    background: #1616165C;
+    font-family: "Iceberg";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.5px black;
+    border: none;
+    margin-left: 319px;
+    margin-top: 25px;
+}
+
+.treasure_btn:hover, .fight_btn:hover
+{
+    cursor: pointer;
+}
+
+.fight_btn
+{
+    width: 208px;
+    height: 231px;
+    border-radius: 70px;
+    background: #1616165C;
+    font-family: "Iceberg";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.5px black;
+    border: none;
+    margin-left: 543px;
+    margin-top: 111px;
+}
+
+.chest_bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/chest_fon.jpg");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_block
+{
+    width: 724px;
+    height: 265px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+}
+
+.points_info
+{
+    font-family: "Iceberg";
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 120px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 3px black;
+}
+
+.continue_game
+{
+    background: none;
+    border: none;
+    font-family: "Jolly Lodger";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: left;
+    color: rgba(94, 188, 37, 1);
+    -webkit-text-stroke: 2px black;
+    text-shadow: 0 4px 1px rgba(0, 0, 0, 1);
+}
+
+.win_bg
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../media/images/boss_fight.jpg");
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.win_info_block
+{
+    width: 895px;
+    height: 265px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+}
+
+.win_info_block h3
+{
+    padding-top: 150px;
+    font-family: "Iceberg";
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px black;
+}
+
+
+/*ADDITIONAL STYLES*/
+
+.red
+{
+    color: #FF0202;
+}
+
+.inactive
+{
+    color: rgba(37, 67, 19, 1);
+}
+
+.inactive:hover
+{
+    cursor: not-allowed;
+}
+
+.d-none
+{
+    display: none;
+}
+
+.unavailable
+{
+    filter: grayscale(100%);
+}
+
+.unavailable:hover
+{
+    cursor: not-allowed;
+    color: #504E4E;
+    font-size: 25px;
+}
+
+.pl-15
+{
+    padding-left: 15px;
+}
+
+.pr-15
+{
+    padding-right: 15px;
+}
+
+.fight_row_up_padding
+{
+    padding-top: 50px;
+}
+
+.fight_row_down_padding
+{
+    padding-top: 20px;
+}
+
+/*ADAPTIVE*/
+@media (min-height: 500px) and (max-height: 880px)
+{
+    .health_bar
+    {
+        width: 270px;
+        height: 34px;
+        font-size: 29px;
+    }
+
+    .fight_name
+    {
+        width: 270px;
+        height: 34px;
+    }
+
+    .fight_character img
+    {
+        width: 164px;
+        height: 218px;
+    }
+
+    .fight_character
+    {
+        width: 270px;
+        height: 312px;
+    }
+
+    .fight_row
+    {
+        height: 330px;
+    }
+
+    .fight_row_up_padding
+    {
+        padding-top: 30px;
+    }
+
+    .fight_row_down_padding
+    {
+        padding-top: 10px;
+    }
+
+    .enemy_img
+    {
+        width: 194px !important;
+    }
+
+    .pl-15
+    {
+        margin-left: 15px;
+    }
+
+    .pr-15
+    {
+        margin-right: 15px;
+    }
+}

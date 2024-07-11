@@ -1,0 +1,5 @@
+﻿  OOP3.cpp
+C:\Users\Kirill\source\repos\OOP3\OOP3.cpp(26,13): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP3\OOP3.cpp(90,14): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP3\OOP3.cpp(95,16): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+  OOP3.vcxproj -> C:\Users\Kirill\source\repos\OOP3\Debug\OOP3.exe

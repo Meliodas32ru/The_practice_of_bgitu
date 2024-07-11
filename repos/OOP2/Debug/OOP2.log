@@ -1,0 +1,4 @@
+﻿  OOP2.cpp
+C:\Users\Kirill\source\repos\OOP2\OOP2.cpp(62,14): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP2\OOP2.cpp(128,32): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+  OOP2.vcxproj -> C:\Users\Kirill\source\repos\OOP2\Debug\OOP2.exe

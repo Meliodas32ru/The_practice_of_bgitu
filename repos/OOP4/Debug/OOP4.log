@@ -1,0 +1,8 @@
+﻿  OOP4.cpp
+C:\Users\Kirill\source\repos\OOP4\OOP4.cpp(22,27): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP4\OOP4.cpp(24,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP4\OOP4.cpp(42,27): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP4\OOP4.cpp(44,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP4\OOP4.cpp(62,27): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Kirill\source\repos\OOP4\OOP4.cpp(64,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  OOP4.vcxproj -> C:\Users\Kirill\source\repos\OOP4\Debug\OOP4.exe

@@ -1,0 +1,4 @@
+﻿  Caper.cpp
+C:\Users\Kirill\source\repos\Caper\Caper\Caper.cpp(107,24): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Kirill\source\repos\Caper\Caper\Caper.cpp(168,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Caper.vcxproj -> C:\Users\Kirill\source\repos\Caper\Debug\Caper.exe

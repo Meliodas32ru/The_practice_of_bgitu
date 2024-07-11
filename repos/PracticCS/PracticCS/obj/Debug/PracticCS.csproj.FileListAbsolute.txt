@@ -1,0 +1,7 @@
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\bin\Debug\PracticCS.exe.config
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\bin\Debug\PracticCS.exe
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\bin\Debug\PracticCS.pdb
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\obj\Debug\PracticCS.csproj.AssemblyReference.cache
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\obj\Debug\PracticCS.csproj.CoreCompileInputs.cache
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\obj\Debug\PracticCS.exe
+C:\Users\Kirill\source\repos\PracticCS\PracticCS\obj\Debug\PracticCS.pdb

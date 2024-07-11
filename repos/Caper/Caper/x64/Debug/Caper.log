@@ -1,0 +1,5 @@
+﻿  Caper.cpp
+C:\Users\Kirill\source\repos\Caper\Caper\Caper.cpp(168,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Kirill\source\repos\Caper\Caper\Caper.cpp(169,9): warning C4477: "printf": в строке форматирования "%i" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "size_t"
+C:\Users\Kirill\source\repos\Caper\Caper\Caper.cpp(169,9): message : рекомендуется использовать "%zi" в строке форматирования
+  Caper.vcxproj -> C:\Users\Kirill\source\repos\Caper\x64\Debug\Caper.exe

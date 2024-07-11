@@ -1,0 +1,7 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\Kirill\source\repos\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(9,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Kirill\source\repos\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(22,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Kirill\source\repos\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(24,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Kirill\source\repos\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(38,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Kirill\source\repos\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(40,22): warning C4018: <: несоответствие типов со знаком и без знака
+  ConsoleApplication1.vcxproj -> C:\Users\Kirill\source\repos\ConsoleApplication1\Debug\ConsoleApplication1.exe
